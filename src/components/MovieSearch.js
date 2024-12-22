@@ -54,14 +54,15 @@ const MovieSearch = () => {
                     <ul>
                         {movies.map((movie) => (
                             <li key={movie.imdbID} style={{ marginBottom: '20px' }}>
+                                <div>
+                                    <strong>{movie.Title}</strong> ({movie.Year})
+                                </div>
                                 <img
                                     src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/150'}
                                     alt={movie.Title}
                                     style={{ width: '100px', marginRight: '10px' }}
                                 />
-                                <div>
-                                    <strong>{movie.Title}</strong> ({movie.Year})
-                                </div>
+                                
                             </li>
                         ))}
                     </ul>
